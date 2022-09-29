@@ -1,55 +1,5 @@
 <div class="container">
-  <form [formGroup]="form">
-    <div class="header__container">
-      <mat-form-field class="filter" appearance="fill">
-        <mat-label>Filter</mat-label>
-        <input matInput placeholder="Search columns" />
-      </mat-form-field>
-
-      <div class="select__container">
-        <mat-form-field appearance="fill" class="select__item">
-          <mat-label>'Sort direction</mat-label>
-          <mat-select formControlName="sortDirection">
-            <mat-option
-              *ngFor="let sortDirection of []"
-              [value]="sortDirection"
-            >
-              {{ sortDirection }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-
-
-        <mat-form-field appearance="fill" class="select__item">
-          <mat-label>Quantity</mat-label>
-          <mat-select formControlName="quantity">
-            <mat-option *ngFor="let quantity of []" [value]="quantity">
-              {{ quantity }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-    </div>
-  </form>
-
-  <mat-card class="example-card" *ngIf="breed.value">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{breed.value | titlecase}}</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image [src]="currentBreedImage.url" [alt]="imageAlt">
-  </mat-card>
-
-  <button (click)="click()">clicker</button>
-  <button (click)="click2()">clicker2</button>
+  <app-cat-header class="header"></app-cat-header>
+  <app-cat-body></app-cat-body>
+  <app-cat-footer></app-cat-footer>
 </div>
-
-<!--
-<mat-form-field appearance="fill" class="select__item">
-  <mat-label>Breeds</mat-label>
-  <mat-select formControlName="breed">
-    <mat-option *ngFor="let breed of breedsList$ | async" [value]="breed.id">
-      {{ breed.name }}
-    </mat-option>
-  </mat-select>
-</mat-form-field> -->

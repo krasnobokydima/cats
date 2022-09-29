@@ -1,38 +1,17 @@
 .container {
-  margin: 50px auto;
-  width: 100%;
-  max-width: 500px;
   display: flex;
   flex-direction: column;
-}
-
-.filter {
-  display: flex;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-::ng-deep .mat-form-field-wrapper{
-  width: 100%;
-}
-
-::ng-deep .mat-form-field-flex {
-  width: 100px;
-}
-
-.select__container {
-  display: flex;
-  gap: 10px;
+  align-items: center;
+  justify-content: start;
   box-sizing: border-box;
-  /* flex-direction: column; */
+
+  margin: auto;
+  padding: 0 20px;
+
+  width: 100%;
+  max-width: 1080px;
 }
 
-.header__container {
-  display: flex;
-  flex-direction: column;
-  /* gap: 20px; */
-}
-
-.select__item {
-  width: 32%;
+.header {
+  width: 100%;
 }

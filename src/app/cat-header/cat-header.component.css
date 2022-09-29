@@ -1,0 +1,29 @@
+.container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.item {
+  width: 100%;
+}
+
+@media (min-width: 650px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .item {
+    width: 32%;
+  }
+}
+
+::ng-deep .mat-form-field-wrapper{
+  width: 100%;
+}
+
+::ng-deep .mat-form-field-flex {
+  width: 100px;
+}
+

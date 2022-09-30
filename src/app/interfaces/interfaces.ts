@@ -50,28 +50,19 @@ export interface ICatImage {
   url: string;
 }
 
-export interface IState {
+export interface ICatState{
   breeds: IBreed[];
   currentCatsArray: ICatImage[];
-
-  order: string;
-  breed_ids: string;
-
-  limit: number;
-  page: number;
+  formParams: IFormParams;
   total: number;
 }
 
-export interface ISearchParams {
+export interface IFormParams {
   order: string;
-  breed_ids: string;
-
-  limit: number;
-  page: number;
+  breed: string;
 }
 
-export interface IPagination {
-  total: number;
-  limit: number;
+export interface IPaginationParams {
   page: number;
+  limit: number;
 }

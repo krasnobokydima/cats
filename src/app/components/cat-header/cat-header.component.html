@@ -1,0 +1,20 @@
+<form [formGroup]="form" class="container">
+  <mat-form-field appearance="fill" class="item">
+    <mat-label>Breeds</mat-label>
+    <mat-select formControlName="breed">
+      <mat-option value="all"> all </mat-option>
+      <mat-option *ngFor="let breed of breedsList$ | async" [value]="breed.id">
+        {{ breed.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="item">
+    <mat-label>'Sort direction</mat-label>
+    <mat-select formControlName="order">
+      <mat-option *ngFor="let order of ['Asc', 'Desc', 'Rand']" [value]="order">
+        {{ order }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>

@@ -1,0 +1,10 @@
+<div class="pagination">
+  <mat-paginator
+    #matPaginator
+    [length]="total$ | async"
+    [pageSize]="initialPageSize"
+    [pageSizeOptions]="pageSizeOptions"
+
+    class="mat-elevation-z2 pagination"
+  ></mat-paginator>
+</div>
